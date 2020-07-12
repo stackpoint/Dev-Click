@@ -1,0 +1,5 @@
+﻿l_english:
+ dev_info.1:0 "[Root.GetName] dev [This.GetName]	adm	[This.baseCost.GetValue]"
+ dev_info.2:0 "[Root.GetName] dev [This.GetName]	dip	[This.baseCost.GetValue]"
+ dev_info.3:0 "[Root.GetName] dev [This.GetName]	mil	[This.baseCost.GetValue]"
+ dev_info.4:0 "leftover [This.temp.GetValue]"
