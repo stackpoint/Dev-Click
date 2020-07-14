@@ -1,7 +1,34 @@
 country_decisions = {
+	dev_click_on = {
+		major = yes
+		
+		potential = {
+			ai = no
+			has_country_flag = dev_click
+		}
+		
+		effect = {
+			clr_country_flag = dev_click
+		}
+	}
+	
+	dev_click_off = {
+		major = yes
+		
+		potential = {
+			ai = no
+			NOT = { has_country_flag = dev_click }
+		}
+		
+		effect = {
+			set_country_flag = dev_click
+		}
+	}
+	
 	adm_click = {
 		major = yes
 		potential = {
+			ai = yes
 			power_tech = {
 				power = adm
 				value = 990
@@ -31,6 +58,7 @@ country_decisions = {
 	dip_click = {
 		major = yes
 		potential = {
+			ai = yes
 			power_tech = {
 				power = dip
 				value = 990
@@ -63,6 +91,7 @@ country_decisions = {
 	mil_click = {
 		major = yes
 		potential = {
+			ai = yes
 			power_tech = {
 				power = mil
 				value = 990
@@ -92,6 +121,7 @@ country_decisions = {
 	spawn_click = {
 		major = yes
 		potential = {
+			ai = yes
 			is_lacking_institutions = yes
 			is_at_war = no
 			primitives = no
