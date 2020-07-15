@@ -191,7 +191,7 @@ country_event = {
 						limit = { owner = { ai = no } }
 						add_province_modifier = {
 							name = recent_growth
-							duration = 360
+							duration = 365
 						}
 					}
 					add_next_institution_embracement_scaled = 5
@@ -218,7 +218,7 @@ country_event = {
 						limit = { owner = { ai = no } }
 						add_province_modifier = {
 							name = recent_growth
-							duration = 360
+							duration = 365
 						}
 					}
 					add_next_institution_embracement_scaled = 5
@@ -239,7 +239,7 @@ country_event = {
 						limit = { owner = { ai = no } }
 						add_province_modifier = {
 							name = recent_growth
-							duration = 360
+							duration = 365
 						}
 					}
 					add_next_institution_embracement_scaled = 5
