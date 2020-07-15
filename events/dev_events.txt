@@ -187,12 +187,9 @@ country_event = {
 					add_power = {
 						power = adm
 					}
-					if = {
-						limit = { owner = { ai = no } }
-						add_province_modifier = {
-							name = recent_growth
-							duration = 365
-						}
+					add_province_modifier = {
+						name = recent_growth
+						duration = 365
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_tax = 1
@@ -214,12 +211,9 @@ country_event = {
 					add_power = {
 						power = dip
 					}
-					if = {
-						limit = { owner = { ai = no } }
-						add_province_modifier = {
-							name = recent_growth
-							duration = 365
-						}
+					add_province_modifier = {
+						name = recent_growth
+						duration = 365
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_production = 1
@@ -235,12 +229,9 @@ country_event = {
 					add_power = {
 						power = mil
 					}
-					if = {
-						limit = { owner = { ai = no } }
-						add_province_modifier = {
-							name = recent_growth
-							duration = 365
-						}
+					add_province_modifier = {
+						name = recent_growth
+						duration = 365
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_manpower = 1
