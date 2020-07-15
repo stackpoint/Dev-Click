@@ -187,6 +187,10 @@ country_event = {
 					add_power = {
 						power = adm
 					}
+					add_province_modifier = {
+						name = recent_growth
+						duration = 365
+					}
 					add_next_institution_embracement_scaled = 5
 					add_base_tax = 1
 					log = dev_info.1
@@ -207,6 +211,10 @@ country_event = {
 					add_power = {
 						power = dip
 					}
+					add_province_modifier = {
+						name = recent_growth
+						duration = 365
+					}
 					add_next_institution_embracement_scaled = 5
 					add_base_production = 1
 					log = dev_info.2
@@ -220,6 +228,10 @@ country_event = {
 				event_target:base_target = {
 					add_power = {
 						power = mil
+					}
+					add_province_modifier = {
+						name = recent_growth
+						duration = 365
 					}
 					add_next_institution_embracement_scaled = 5
 					add_base_manpower = 1
