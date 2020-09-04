@@ -560,21 +560,11 @@ add_devastation_reduction = {
 		value = 6
 	}
 	
-	binary_ad3 = { variable = pDev2 	valueAdd = 65.536	valueSub = -65.536 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 32.768	valueSub = -32.768 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 16.384	valueSub = -16.384 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 8.192	valueSub = -8.192 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 4.096	valueSub = -4.096 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 2.048	valueSub = -2.048 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 1.024	valueSub = -1.024 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.512 	valueSub = -0.512 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.256 	valueSub = -0.256 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.128 	valueSub = -0.128 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.064 	valueSub = -0.064 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.032 	valueSub = -0.032 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.016 	valueSub = -0.016 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.008 	valueSub = -0.008 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.004 	valueSub = -0.004 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.002 	valueSub = -0.002 }
-	binary_ad3 = { variable = pDev2 	valueAdd = 0.001 	valueSub = -0.001 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 64 	valueSub = -64 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 32 	valueSub = -32 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 16 	valueSub = -16 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 8 	valueSub = -8 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 4 	valueSub = -4 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 2 	valueSub = -2 }
+	binary_ad3 = { variable = pDev2 	valueAdd = 1 	valueSub = -1 }
 }
