@@ -7,7 +7,7 @@ country_event = {
 	desc = dev_events.1.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		NOT = { is_month = 1 }
 		REB = {
@@ -16,8 +16,16 @@ country_event = {
 				NOT = { has_country_flag = janYear }
 			}
 		}
+		NOT = {
+			calc_true_if = {
+				all_country = {
+					ai = no
+				}
+				amount = 2
+			}
+		}
 	}
-
+	
 	immediate = {
 		REB = {
 			clr_country_flag = janYear
@@ -39,7 +47,7 @@ country_event = {
 	picture = INVENTION_eventPicture
 	is_triggered_only = yes
 	hidden = yes
-
+	
 	immediate = {
 		REB = {
 			log = "==yearly institution counter=="
@@ -148,18 +156,24 @@ country_event = {
 	desc = dev_events.3.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		OR = {
 			ai = yes
 			has_country_flag = dev_click
 		}
+		
+		REB = {
+			NOT = { had_country_flag = { flag = janYear	days = 365 } }
+			has_country_flag = janYear
+		}
+		
 		power_tech = {
 			power = adm
-			value = 990
+			value = 960
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			set_base_target = {
@@ -221,18 +235,24 @@ country_event = {
 	desc = dev_events.4.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		OR = {
 			ai = yes
 			has_country_flag = dev_click
 		}
+		
+		REB = {
+			NOT = { had_country_flag = { flag = janYear	days = 365 } }
+			has_country_flag = janYear
+		}
+		
 		power_tech = {
 			power = dip
-			value = 990
+			value = 960
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			set_base_target = {
@@ -284,18 +304,24 @@ country_event = {
 	desc = dev_events.5.d
 	picture = INVENTION_eventPicture
 	hidden = yes
-
+	
 	trigger = {
 		OR = {
 			ai = yes
 			has_country_flag = dev_click
 		}
+		
+		REB = {
+			NOT = { had_country_flag = { flag = janYear	days = 365 } }
+			has_country_flag = janYear
+		}
+		
 		power_tech = {
 			power = mil
-			value = 990
+			value = 960
 		}
 	}
-
+	
 	immediate = {
 		hidden_effect = {
 			set_base_target = {

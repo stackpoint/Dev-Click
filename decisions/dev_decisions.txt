@@ -5,6 +5,11 @@ country_decisions = {
 		potential = {
 			ai = no
 			has_country_flag = dev_click
+			
+			REB = {
+				NOT = { had_country_flag = { flag = janYear	days = 365 } }
+				has_country_flag = janYear
+			}
 		}
 		
 		effect = {
@@ -18,6 +23,11 @@ country_decisions = {
 		potential = {
 			ai = no
 			NOT = { has_country_flag = dev_click }
+			
+			REB = {
+				NOT = { had_country_flag = { flag = janYear	days = 365 } }
+				has_country_flag = janYear
+			}
 		}
 		
 		effect = {
