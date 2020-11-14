@@ -463,6 +463,14 @@ spawn_institution = {
 				log = dev_info.3
 			}
 			
+			add_devastation_reduction = yes
+			owner = {
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
+			}
+			
 			change_variable = {
 				which = devCount
 				value = 1

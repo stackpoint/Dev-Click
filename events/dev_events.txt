@@ -197,6 +197,10 @@ country_event = {
 					add_devastation_reduction = yes
 					log = dev_info.1
 				}
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
+				}
 				change_variable = {
 					which = admClicks
 					value = 1
@@ -255,6 +259,10 @@ country_event = {
 					add_base_production = 1
 					add_devastation_reduction = yes
 					log = dev_info.2
+				}
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
 				}
 				change_variable = {
 					which = dipClicks
@@ -340,6 +348,10 @@ country_event = {
 					add_base_manpower = 1
 					add_devastation_reduction = yes
 					log = dev_info.3
+				}
+				change_estate_land_share = {
+					estate = all
+					share = -0.2
 				}
 				change_variable = {
 					which = milClicks

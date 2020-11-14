@@ -32,7 +32,7 @@ country_decisions = {
 			ai = yes
 			power_tech = {
 				power = adm
-				value = 990
+				value = 960
 			}
 		}
 		effect = {
@@ -69,7 +69,12 @@ country_decisions = {
 						}
 						add_next_institution_embracement_scaled = 5
 						add_base_tax = 1
+						add_devastation_reduction = yes
 						log = dev_info.1
+					}
+					change_estate_land_share = {
+						estate = all
+						share = -0.2
 					}
 				}
 			}
@@ -86,7 +91,7 @@ country_decisions = {
 			ai = yes
 			power_tech = {
 				power = dip
-				value = 990
+				value = 960
 			}
 		}
 		effect = {
@@ -113,7 +118,12 @@ country_decisions = {
 						}
 						add_next_institution_embracement_scaled = 5
 						add_base_production = 1
+						add_devastation_reduction = yes
 						log = dev_info.2
+					}
+					change_estate_land_share = {
+						estate = all
+						share = -0.2
 					}
 				}
 			}
@@ -130,7 +140,7 @@ country_decisions = {
 			ai = yes
 			power_tech = {
 				power = mil
-				value = 990
+				value = 960
 			}
 		}
 		effect = {
@@ -183,7 +193,12 @@ country_decisions = {
 						}
 						add_next_institution_embracement_scaled = 5
 						add_base_manpower = 1
+						add_devastation_reduction = yes
 						log = dev_info.3
+					}
+					change_estate_land_share = {
+						estate = all
+						share = -0.2
 					}
 				}
 			}
