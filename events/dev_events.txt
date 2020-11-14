@@ -352,13 +352,9 @@ country_event = {
 					log = "[This.GetName] strengthens government**"
 				}
 				else = {
-					mil_power_cost = 50
+					general_cost = yes
 					
-						 if = { limit = { army_tradition = 80 } create_general = { tradition = 90 } }
-					else_if = { limit = { army_tradition = 60 } create_general = { tradition = 70 } }
-					else_if = { limit = { army_tradition = 40 } create_general = { tradition = 50 } }
-					else_if = { limit = { army_tradition = 20 } create_general = { tradition = 30 } }
-					else 	= { 								create_general = { tradition = 10 } }
+					create_general_var = yes
 					
 					add_army_professionalism = 0.01
 					
