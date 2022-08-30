@@ -30,7 +30,7 @@ MAX_value = {
 	}
 }
 
-set_base_value = {
+set_base_value0 = {
 	set_variable = { #100% base cost
 		which = $which$
 		value = 1 
@@ -286,7 +286,7 @@ set_base_target = {
 			}
 		}
 		else = {
-			set_base_value = {
+			set_base_value0 = {
 				which = baseCost
 			}
 			
@@ -367,7 +367,7 @@ set_base_target = {
 	clr_country_flag = $base$_flag
 }
 
-binary_ad1 = {
+binary_ad10 = {
 	if = {
 		limit = {
 			check_variable = {
@@ -386,23 +386,23 @@ binary_ad1 = {
 	}
 }
 
-add_power = { #reddit.com/r/eu4/comments/dy7lyv
+add_power0 = { #reddit.com/r/eu4/comments/dy7lyv
 	set_variable = {
 		which = temp
 		which = baseCost
 	}
 	
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 1024 	valueSub = -1024 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 512		valueSub = -512 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 256		valueSub = -256 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 128		valueSub = -128 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 64		valueSub = -64 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 32		valueSub = -32 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 16		valueSub = -16 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 8		valueSub = -8 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 4		valueSub = -4 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 2		valueSub = -2 }
-	binary_ad1 = { variable = temp	addcommand = $power$	valueAdd = 1		valueSub = -1 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 1024 	valueSub = -1024 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 512		valueSub = -512 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 256		valueSub = -256 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 128		valueSub = -128 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 64		valueSub = -64 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 32		valueSub = -32 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 16		valueSub = -16 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 8		valueSub = -8 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 4		valueSub = -4 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 2		valueSub = -2 }
+	binary_ad10 = { variable = temp	addcommand = $power$	valueAdd = 1		valueSub = -1 }
 	#log = dev_info.4
 }
 
@@ -422,7 +422,7 @@ spawn_institution = {
 			limit = {
 				NOT = { $institution$ = 100 }
 			}
-			set_base_value = {
+			set_base_value0 = {
 				which = baseCost
 			}
 			
@@ -437,7 +437,7 @@ spawn_institution = {
 					check_variable = { which = admPower 	which = dipPower }
 					check_variable = { which = admPower 	which = milPower }
 				}
-				add_power = {
+				add_power0 = {
 					power = adm
 				}
 				add_base_tax = 1
@@ -447,14 +447,14 @@ spawn_institution = {
 				limit = {
 					check_variable = { which = dipPower	which = milPower }
 				}
-				add_power = {
+				add_power0 = {
 					power = dip
 				}
 				add_base_production = 1
 				log = dev_info.2
 			}
 			else = {
-				add_power = {
+				add_power0 = {
 					power = mil
 				}
 				add_base_manpower = 1
