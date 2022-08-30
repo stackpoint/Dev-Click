@@ -229,10 +229,6 @@ country_event = {
 					which = devsumClicks
 					value = 1
 				}
-				change_variable = {
-					which = autoDev
-					value = 1
-				}
 			}
 		}
 	}
@@ -319,10 +315,6 @@ country_event = {
 				}
 				change_variable = {
 					which = devsumClicks
-					value = 1
-				}
-				change_variable = {
-					which = autoDev
 					value = 1
 				}
 			}
@@ -433,10 +425,6 @@ country_event = {
 				}
 				change_variable = {
 					which = devsumClicks
-					value = 1
-				}
-				change_variable = {
-					which = autoDev
 					value = 1
 				}
 			}

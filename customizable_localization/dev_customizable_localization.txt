@@ -77,23 +77,3 @@ defined_text = {
 		localisation_key = zeroLocKey
 	}
 }
-
-defined_text = {
-	name = autoDevLoc
-	random = no
-	text = {
-        trigger = {
-			check_variable = {
-				which = autoDev
-				value = 1
-			}
-        }
-        localisation_key = autoDevLocKey
-	}
-	text = {
-		trigger = {
-			always = yes
-		}
-		localisation_key = zeroLocKey
-	}
-}
