@@ -1,0 +1,48 @@
+
+# province
+on_adm_development = {
+	hidden_effect = {
+		owner = {
+			change_variable = {
+				which = admClicks
+				value = 1
+			}
+			change_variable = {
+				which = devsumClicks
+				value = 1
+			}
+		}
+	}
+}
+
+# province
+on_dip_development = {
+	hidden_effect = {
+		owner = {
+			change_variable = {
+				which = dipClicks
+				value = 1
+			}
+			change_variable = {
+				which = devsumClicks
+				value = 1
+			}
+		}
+	}
+}
+
+# province
+on_mil_development = {
+	hidden_effect = {
+		owner = {
+			change_variable = {
+				which = milClicks
+				value = 1
+			}
+			change_variable = {
+				which = devsumClicks
+				value = 1
+			}
+		}
+	}
+}

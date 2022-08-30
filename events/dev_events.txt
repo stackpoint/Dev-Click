@@ -149,6 +149,7 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
+		NOT = { has_global_flag = dev_click_disabled_flag }
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -220,6 +221,14 @@ country_event = {
 					which = admClicks
 					value = 1
 				}
+				change_variable = {
+					which = devsumClicks
+					value = 1
+				}
+				change_variable = {
+					which = autoDev
+					value = 1
+				}
 			}
 		}
 	}
@@ -238,6 +247,7 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
+		NOT = { has_global_flag = dev_click_disabled_flag }
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -299,6 +309,14 @@ country_event = {
 					which = dipClicks
 					value = 1
 				}
+				change_variable = {
+					which = devsumClicks
+					value = 1
+				}
+				change_variable = {
+					which = autoDev
+					value = 1
+				}
 			}
 		}
 	}
@@ -317,6 +335,7 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
+		NOT = { has_global_flag = dev_click_disabled_flag }
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -400,6 +419,14 @@ country_event = {
 					which = milClicks
 					value = 1
 				}
+				change_variable = {
+					which = devsumClicks
+					value = 1
+				}
+				change_variable = {
+					which = autoDev
+					value = 1
+				}
 			}
 		}
 	}
@@ -408,3 +435,83 @@ country_event = {
 		#hidden
 	}
 }
+
+country_event = {
+	id = dev_events.6
+	title = dev_events.6.t
+	desc = dev_events.6.d
+	picture = INVENTION_eventPicture
+	hidden = yes
+	
+
+	trigger = {
+		NOT = { has_global_flag = auto_dev_tooltip_flag }
+	}
+	
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					check_variable = {
+						which = admClicks
+						value = 1
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					which = admClicks
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = dipClicks
+						value = 1
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					which = dipClicks
+					value = 0
+				}
+			}	
+			if = {
+				limit = {
+					check_variable = {
+						which = milClicks
+						value = 1
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					which = milClicks
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = devsumClicks
+						value = 1
+					}
+				}
+			}
+			else = {
+				set_variable = {
+					which = devsumClicks
+					value = 0
+				}
+			}
+		}
+		set_global_flag = auto_dev_tooltip_flag
+	}
+	
+	option = {
+		#hidden
+	}
+}
+
