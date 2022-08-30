@@ -90,6 +90,10 @@ country_decisions = {
 			NOT = { had_global_flag = { flag = janYear	days = 365 } }
 			has_global_flag = janYear
 			ai = yes
+			OR = {
+				had_country_flag = { flag = institution_flag	days = 365 }
+				NOT = { has_country_flag = institution_flag }
+			}
 			is_lacking_institutions = yes
 			is_at_war = no
 			primitives = no
@@ -139,12 +143,14 @@ country_decisions = {
 				}
 				check_variable = {
 					which = admPower
-					value = 2300
+					value = 2400
 				}
 			}
 		}
 		effect = {
 			hidden_effect = {
+				set_country_flag = institution_flag
+				
 				if = {
 					limit = {
 						NOT = { has_institution = feudalism }
