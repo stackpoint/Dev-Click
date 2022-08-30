@@ -41,10 +41,54 @@ country_decisions = {
 		}
 	}
 	
+	ai_dev_click_on = {
+		major = yes
+		
+		potential = {
+			has_global_flag = ai_dev_click
+			
+			NOT = { had_global_flag = { flag = janYear	days = 365 } }
+			has_global_flag = janYear
+		}
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			clr_global_flag = ai_dev_click
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ai_dev_click_off = {
+		major = yes
+		
+		potential = {
+			NOT = { has_global_flag = ai_dev_click }
+			
+			NOT = { had_global_flag = { flag = janYear	days = 365 } }
+			has_global_flag = janYear
+		}
+		allow = {
+			ai = no
+		}
+		
+		effect = {
+			set_global_flag = ai_dev_click
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
 	spawn_click = {
 		major = yes
 		potential = {
-			#always = no
+			has_global_flag = ai_dev_click
+			NOT = { had_global_flag = { flag = janYear	days = 365 } }
+			has_global_flag = janYear
 			ai = yes
 			is_lacking_institutions = yes
 			is_at_war = no

@@ -149,7 +149,17 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_global_flag = dev_click_disabled_flag }
+		OR = {
+			AND = {
+				ai = yes
+				has_global_flag = ai_dev_click
+			}
+			AND = {
+				NOT = { ai = yes }
+				has_country_flag = dev_click
+			}
+		}
+		
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -158,15 +168,9 @@ country_event = {
 			NOT = { has_country_flag = admClick }
 		}
 		
-		OR = {
-			has_country_modifier = adm_limit
-			AND = {
-				has_country_flag = dev_click
-				power_tech = {
-					power = adm
-					value = 960
-				}
-			}
+		power_tech = {
+			power = adm
+			value = 960
 		}
 	}
 	
@@ -247,7 +251,17 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_global_flag = dev_click_disabled_flag }
+		OR = {
+			AND = {
+				ai = yes
+				has_global_flag = ai_dev_click
+			}
+			AND = {
+				NOT = { ai = yes }
+				has_country_flag = dev_click
+			}
+		}
+		
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -256,15 +270,9 @@ country_event = {
 			NOT = { has_country_flag = dipClick }
 		}
 		
-		OR = {
-			has_country_modifier = dip_limit
-			AND = {
-				has_country_flag = dev_click
-				power_tech = {
-					power = dip
-					value = 960
-				}
-			}
+		power_tech = {
+			power = dip
+			value = 960
 		}
 	}
 	
@@ -335,7 +343,17 @@ country_event = {
 	hidden = yes
 	
 	trigger = {
-		NOT = { has_global_flag = dev_click_disabled_flag }
+		OR = {
+			AND = {
+				ai = yes
+				has_global_flag = ai_dev_click
+			}
+			AND = {
+				NOT = { ai = yes }
+				has_country_flag = dev_click
+			}
+		}
+		
 		NOT = { had_global_flag = { flag = janYear	days = 365 } }
 		has_global_flag = janYear
 		
@@ -344,15 +362,9 @@ country_event = {
 			NOT = { has_country_flag = milClick }
 		}
 		
-		OR = {
-			has_country_modifier = mil_limit
-			AND = {
-				has_country_flag = dev_click
-				power_tech = {
-					power = mil
-					value = 960
-				}
-			}
+		power_tech = {
+			power = mil
+			value = 960
 		}
 	}
 	
