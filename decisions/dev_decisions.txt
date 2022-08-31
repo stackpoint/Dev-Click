@@ -11,6 +11,12 @@ country_decisions = {
 		allow = {
 			ai = no
 		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_state_core = ROOT
+			controlled_by = ROOT
+			NOT = { has_siege = yes }
+		}
 		
 		effect = {
 			clr_country_flag = dev_click
@@ -31,6 +37,12 @@ country_decisions = {
 		}
 		allow = {
 			ai = no
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_state_core = ROOT
+			controlled_by = ROOT
+			NOT = { has_siege = yes }
 		}
 		
 		effect = {
@@ -53,6 +65,26 @@ country_decisions = {
 		allow = {
 			ai = no
 		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				ai = yes
+				OR = {
+					power_tech = {
+						power = adm
+						value = 960
+					}
+					power_tech = {
+						power = dip
+						value = 960
+					}
+					power_tech = {
+						power = mil
+						value = 960
+					}
+				}
+			}
+		}
 		
 		effect = {
 			clr_global_flag = ai_dev_click
@@ -73,6 +105,26 @@ country_decisions = {
 		}
 		allow = {
 			ai = no
+		}
+		provinces_to_highlight = {
+			is_capital = yes
+			owner = {
+				ai = yes
+				OR = {
+					power_tech = {
+						power = adm
+						value = 960
+					}
+					power_tech = {
+						power = dip
+						value = 960
+					}
+					power_tech = {
+						power = mil
+						value = 960
+					}
+				}
+			}
 		}
 		
 		effect = {
@@ -150,6 +202,7 @@ country_decisions = {
 		effect = {
 			hidden_effect = {
 				set_country_flag = institution_flag
+				log = "[Root.GetName] trying to spawn institution"
 				
 				if = {
 					limit = {
