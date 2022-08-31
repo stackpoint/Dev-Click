@@ -4,9 +4,6 @@ country_decisions = {
 		
 		potential = {
 			has_country_flag = dev_click
-			
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 		allow = {
 			ai = no
@@ -31,9 +28,6 @@ country_decisions = {
 		
 		potential = {
 			NOT = { has_country_flag = dev_click }
-			
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 		allow = {
 			ai = no
@@ -58,9 +52,6 @@ country_decisions = {
 		
 		potential = {
 			has_global_flag = ai_dev_click
-			
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 		allow = {
 			ai = no
@@ -99,9 +90,6 @@ country_decisions = {
 		
 		potential = {
 			NOT = { has_global_flag = ai_dev_click }
-			
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 		}
 		allow = {
 			ai = no
@@ -139,8 +127,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			has_global_flag = ai_dev_click
-			NOT = { had_global_flag = { flag = janYear	days = 365 } }
-			has_global_flag = janYear
 			ai = yes
 			OR = {
 				had_country_flag = { flag = institution_flag	days = 365 }
