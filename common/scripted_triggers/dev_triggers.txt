@@ -1,319 +1,280 @@
 power_tech = {
 	$power$_power = $value$
 	
-	variable_arithmetic_trigger = {
-		export_to_variable = {
-			which = power
-			value = trigger_value:$power$_power
-		}
-		export_to_variable = {
-			which = powerCost
-			value = modifier:all_power_cost
-		}
-		export_to_variable = {
-			which = $power$_flag
-			value = 1
-		}
-		change_variable = {
-			which = powerCost
-			value = 1
-		}
-		OR = {
-			has_institution = feudalism
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
-				}
+	OR = {
+		$power$_tech = 32
+		
+		variable_arithmetic_trigger = {
+			export_to_variable = {
+				which = power
+				value = trigger_value:$power$_power
 			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = renaissance }
-			has_institution = renaissance
-			NOT = { $power$_tech = 5 }
-			AND = {
-				NOT = { $power$_tech = 6 }
+			export_to_variable = {
+				which = powerCost
+				value = modifier:all_power_cost
+			}
+			export_to_variable = {
+				which = $power$_flag
+				value = 1
+			}
+			change_variable = {
+				which = powerCost
+				value = 1
+			}
+			OR = {
+				has_institution = feudalism
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						value = 0.15
+						value = 0.5
 					}
 				}
 			}
-			AND = {
-				NOT = { $power$_tech = 7 }
+			OR = {
+				has_institution = renaissance
+				NOT = { $power$_tech = 4 }
+				AND = {
+					NOT = { $power$_tech = 5 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 6 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						value = 0.3
+						value = 0.5
 					}
 				}
 			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
+			OR = {
+				has_institution = new_world_i
+				NOT = { $power$_tech = 8 }
+				AND = {
+					NOT = { $power$_tech = 9 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
 				}
-			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = new_world_i }
-			has_institution = new_world_i
-			NOT = { $power$_tech = 9 }
-			AND = {
-				NOT = { $power$_tech = 10 }
+				AND = {
+					NOT = { $power$_tech = 10 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						value = 0.15
+						value = 0.5
 					}
 				}
 			}
-			AND = {
-				NOT = { $power$_tech = 11 }
+			OR = {
+				has_institution = printing_press
+				NOT = { $power$_tech = 12 }
+				AND = {
+					NOT = { $power$_tech = 13 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 14 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						value = 0.3
+						value = 0.5
 					}
 				}
 			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
-				}
-			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = printing_press }
-			has_institution = printing_press
-			NOT = { $power$_tech = 13 }
-			AND = {
-				NOT = { $power$_tech = 14 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.15
+			OR = {
+				has_institution = global_trade
+				NOT = { $power$_tech = 16 }
+				AND = {
+					NOT = { $power$_tech = 17 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
 					}
 				}
-			}
-			AND = {
-				NOT = { $power$_tech = 15 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.3
+				AND = {
+					NOT = { $power$_tech = 18 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
 					}
 				}
-			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
-				}
-			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = global_trade }
-			has_institution = global_trade
-			NOT = { $power$_tech = 17 }
-			AND = {
-				NOT = { $power$_tech = 18 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.15
-					}
-				}
-			}
-			AND = {
-				NOT = { $power$_tech = 19 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.3
-					}
-				}
-			}
-			AND = {
-				$power$_tech = 32
-				check_variable = {
-					which = dip_flag
-					value = 1
-				}
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
+				AND = {
+					$power$_tech = 31
+					check_variable = {
+						which = dip_flag
 						value = 1
 					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
 				}
-			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
-				}
-			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = manufactories }
-			has_institution = manufactories
-			NOT = { $power$_tech = 21 }
-			AND = {
-				NOT = { $power$_tech = 22 }
 				variable_arithmetic_trigger = {
 					change_variable = {
 						which = powerCost
-						value = 0.15
+						value = 0.5
 					}
 				}
 			}
-			AND = {
+			OR = {
+				has_institution = manufactories
+				NOT = { $power$_tech = 20 }
+				AND = {
+					NOT = { $power$_tech = 21 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 22 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 31 }
+					$power$_tech = 30
+					check_variable = {
+						which = dip_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
+				AND = {
+					$power$_tech = 31
+					check_variable = {
+						which = mil_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
+				variable_arithmetic_trigger = {
+					change_variable = {
+						which = powerCost
+						value = 0.5
+					}
+				}
+			}
+			OR = {
+				has_institution = enlightenment
 				NOT = { $power$_tech = 23 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.3
+				AND = {
+					NOT = { $power$_tech = 24 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.15
+						}
 					}
 				}
-			}
-			AND = {
-				NOT = { $power$_tech = 32 }
-				$power$_tech = 31
-				check_variable = {
-					which = dip_flag
-					value = 1
+				AND = {
+					NOT = { $power$_tech = 25 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.3
+						}
+					}
 				}
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
+				AND = {
+					$power$_tech = 31
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							NOT = { $power$_tech = 29 }
+							$power$_tech = 28
+						}
+						AND = {
+							NOT = { $power$_tech = 31 }
+							$power$_tech = 30
+						}
+					}
+					check_variable = {
+						which = adm_flag
 						value = 1
 					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
+					}
 				}
-			}
-			AND = {
-				$power$_tech = 32
-				check_variable = {
-					which = mil_flag
-					value = 1
-				}
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
+				AND = {
+					NOT = { $power$_tech = 30 }
+					$power$_tech = 29
+					check_variable = {
+						which = mil_flag
 						value = 1
 					}
-				}
-			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
-				}
-			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = enlightenment }
-			has_institution = enlightenment
-			NOT = { $power$_tech = 24 }
-			AND = {
-				NOT = { $power$_tech = 25 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.15
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 1
+						}
 					}
-				}
-			}
-			AND = {
-				NOT = { $power$_tech = 26 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.3
-					}
-				}
-			}
-			AND = {
-				$power$_tech = 32
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 1
-					}
-				}
-			}
-			AND = {
-				OR = {
-					AND = {
-						NOT = { $power$_tech = 30 }
-						$power$_tech = 29
-					}
-					AND = {
-						NOT = { $power$_tech = 32 }
-						$power$_tech = 31
-					}
-				}
-				check_variable = {
-					which = adm_flag
-					value = 1
-				}
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 1
-					}
-				}
-			}
-			AND = {
-				NOT = { $power$_tech = 31 }
-				$power$_tech = 30
-				check_variable = {
-					which = mil_flag
-					value = 1
-				}
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 1
-					}
-				}
-			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 0.5
-				}
-			}
-		}
-		OR = {
-			NOT = { is_institution_enabled = industrialization }
-			has_institution = industrialization
-			NOT = { $power$_tech = 28 }
-			AND = {
-				NOT = { $power$_tech = 29 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.25
-					}
-				}
-			}
-			AND = {
-				NOT = { $power$_tech = 30 }
-				variable_arithmetic_trigger = {
-					change_variable = {
-						which = powerCost
-						value = 0.5
-					}
-				}
-			}
-			AND = {
-				NOT = { $power$_tech = 31 }
-				$power$_tech = 30
-				check_variable = {
-					which = mil_flag
-					value = 1
 				}
 				variable_arithmetic_trigger = {
 					change_variable = {
@@ -322,20 +283,56 @@ power_tech = {
 					}
 				}
 			}
-			variable_arithmetic_trigger = {
-				change_variable = {
-					which = powerCost
-					value = 1
+			OR = {
+				has_institution = industrialization
+				NOT = { $power$_tech = 27 }
+				AND = {
+					NOT = { $power$_tech = 28 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.25
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 29 }
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.5
+						}
+					}
+				}
+				AND = {
+					NOT = { $power$_tech = 30 }
+					$power$_tech = 29
+					check_variable = {
+						which = mil_flag
+						value = 1
+					}
+					variable_arithmetic_trigger = {
+						change_variable = {
+							which = powerCost
+							value = 0.5
+						}
+					}
+				}
+				variable_arithmetic_trigger = {
+					change_variable = {
+						which = powerCost
+						value = 1
+					}
 				}
 			}
-		}
-		multiply_variable = {
-			which = powerCost
-			value = $value$
-		}
-		check_variable = {
-			which = power
-			which = powerCost
+			multiply_variable = {
+				which = powerCost
+				value = $value$
+			}
+			check_variable = {
+				which = power
+				which = powerCost
+			}
 		}
 	}
 }
