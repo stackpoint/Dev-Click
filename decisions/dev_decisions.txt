@@ -9,10 +9,7 @@ country_decisions = {
 			ai = no
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
-			is_state_core = ROOT
-			controlled_by = ROOT
-			NOT = { has_siege = yes }
+			dev_check = yes
 		}
 		
 		effect = {
@@ -33,10 +30,7 @@ country_decisions = {
 			ai = no
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
-			is_state_core = ROOT
-			controlled_by = ROOT
-			NOT = { has_siege = yes }
+			dev_check = yes
 		}
 		
 		effect = {
