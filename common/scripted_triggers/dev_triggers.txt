@@ -773,7 +773,7 @@ dev_check = {
 								}
 							}
 							else = {
-								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.8 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.08 } } } }
 									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.12 } } } }
 										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.14 } } } }
 											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = -0.15 } } } }
@@ -1271,7 +1271,7 @@ dev_check = {
 								}
 							}
 							else = {
-								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.2 } } } }
+								if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.92 } } } }
 									if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.88 } } } }
 										if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.86 } } } }
 											if = { limit = { PREV = { NOT = { has_local_modifier_value = { which = local_development_cost value = 0.85 } } } }
