@@ -135,9 +135,8 @@ country_decisions = {
 			}
 			num_of_cities = 5
 			OR = {
+				NOT = { has_dlc = "Rights of Man" }
 				ruler_has_personality = free_thinker_personality
-				#ruler_has_personality = well_connected_personality
-				#ruler_has_personality = well_advised_personality
 				ruler_has_personality = scholar_personality
 				ruler_has_personality = entrepreneur_personality
 				ruler_has_personality = industrious_personality
@@ -175,7 +174,7 @@ country_decisions = {
 				}
 				check_variable = {
 					which = admPower
-					value = 2400
+					value = 2300
 				}
 			}
 		}
