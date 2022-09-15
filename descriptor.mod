@@ -1,9 +1,9 @@
-version="1.2"
+version="1.7"
 tags={
 	"Fixes"
 	"Gameplay"
 }
 name="Auto Dev"
 picture="thumbnail.png"
-supported_version="1.33.3"
+supported_version="1.34.2"
 remote_file_id="2817151719"
