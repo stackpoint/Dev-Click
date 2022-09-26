@@ -1,4 +1,4 @@
-version="1.8"
+version="1.9"
 tags={
 	"Fixes"
 	"Gameplay"
@@ -8,5 +8,5 @@ dependencies={
 }
 name="Auto Dev"
 picture="thumbnail.png"
-supported_version="1.34.2"
+supported_version="1.34.*"
 remote_file_id="2817151719"
